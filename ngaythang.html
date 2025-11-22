@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function checkNgay(){
+        //     let thang = +prompt("Nhập tháng");
+        //     if(thang>0 && thang<13){
+        //         if(thang==2){
+        //             alert("Tháng 2 có 28 hoặc 29 ngày");}
+        //         else if(thang ==4 || thang==6||thang==9||thang==11){
+        //             alert("Tháng " + thang + " có 30 ngày");
+        //         }else{
+        //             alert("Tháng " + thang + " có 31 ngày");
+        //         }
+        //     }else{
+        //         alert("Không hợp lệ");
+        //     }
+        // }
+        // checkNgay();
+        switch(thang){
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                if(thang==12){
+                    alert("Tháng 12 có 31 ngày, chúc mừng năm mới!");
+                }else{
+                alert("Tháng " + thang + " có 31 ngày");}
+                break;
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                alert("Tháng " + thang + " có 30 ngày");
+                break;
+            case 2:
+                alert("Tháng 2 có 28 hoặc 29 ngày");
+                break;
+            default: 
+            // default luôn ở cuối cùng
+                alert("Không hợp lệ");
+        }
+    </script>
+</body>
+</html>

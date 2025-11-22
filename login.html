@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <fieldset>
+        <legend>Đăng nhập</legend>
+        <label for="username">Tên đăng nhập:</label>
+        <input type="text" id="username" name="username"><br><br>
+        <label for="pass">Mật khẩu</label>
+        <input type="password" id="pass" name="pass">
+        <button id="showPassBtn" type="button" onclick="showPass()">xem</button>
+        <!-- <button type="button" onclick="hidePass()">ẩn</button> -->
+         <br><br> 
+        <button onclick="login ()">Đăng nhập</button>
+        </fieldset>
+    </form>
+    <script>
+        let passInput = document.getElementById("pass");
+        let showPassBtn = document.getElementById("showPassBtn");
+        function login (){
+            let username = document.getElementById("username").value;
+            let pass = document.getElementById("pass").value;
+            alert("Tên đăng nhập: " + username + "\nMật khẩu: " + pass);
+        }
+        function showPass (){
+           
+            if (passInput.type === "password"){
+                passInput.type = "text";
+                showPassBtn.innerHTML = "ẩn";
+            } else {
+                passInput.type = "password";
+                showPassBtn.innerHTML = "xem";
+            }
+            
+        }
+        // function hidePass (){
+        //     document.getElementById("pass").type = "password";
+        // }
+    </script>
+</body>
+</html>
